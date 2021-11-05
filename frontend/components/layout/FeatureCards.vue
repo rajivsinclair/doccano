@@ -9,7 +9,7 @@
       <v-flex xs12 sm4 class="my-3">
         <div class="text-xs-center">
           <h2 class="headline">
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vQxeNvN5RM4fib7kNLWMZOhK73xHK9j0hMbOxPikcnYP_rgqjxPXPq_zLQW9MtHMn9ptgJa3Fo1pTgG/pub?embedded=true"></iframe>
+<iframe width="100%" height="100%" src="https://docs.google.com/document/d/e/2PACX-1vQxeNvN5RM4fib7kNLWMZOhK73xHK9j0hMbOxPikcnYP_rgqjxPXPq_zLQW9MtHMn9ptgJa3Fo1pTgG/pub?embedded=true"></iframe>
           </h2>
         </div>
       </v-flex>

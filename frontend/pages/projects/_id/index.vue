@@ -30,8 +30,8 @@
               ref="youtube"
               :video-id="item.videoId"
             />
-            <iframe src="https://docs.google.com/document/d/e/2PACX-1vQxeNvN5RM4fib7kNLWMZOhK73xHK9j0hMbOxPikcnYP_rgqjxPXPq_zLQW9MtHMn9ptgJa3Fo1pTgG/pub?embedded=true"></iframe>
-            
+            <!-- <iframe src="https://docs.google.com/document/d/e/2PACX-1vQxeNvN5RM4fib7kNLWMZOhK73xHK9j0hMbOxPikcnYP_rgqjxPXPq_zLQW9MtHMn9ptgJa3Fo1pTgG/pub?embedded=true"></iframe> -->
+
           </v-card>
           <!-- <v-btn
             color="primary mt-5"
