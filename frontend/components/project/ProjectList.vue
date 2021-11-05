@@ -1,22 +1,22 @@
 <template>
   <v-data-table
     :value="value"
-    :headers="headers"
+    <!-- :headers="headers" -->
     :items="items"
-    :search="search"
+    <!-- :search="search" -->
     :loading="isLoading"
     :loading-text="$t('generic.loading')"
     :no-data-text="$t('vuetify.noDataAvailable')"
-    :footer-props="{
+    <!-- :footer-props="{
       'showFirstLastPage': true,
       'items-per-page-text': $t('vuetify.itemsPerPageText'),
       'page-text': $t('dataset.pageText')
-    }"
+    }" -->
     item-key="id"
     show-select
     @input="$emit('input', $event)"
   >
-    <template #top>
+    <!-- <template #top>
       <v-text-field
         v-model="search"
         prepend-inner-icon="search"
@@ -25,13 +25,13 @@
         hide-details
         filled
       />
-    </template>
+    </template> -->
     <template #[`item.name`]="{ item }">
       <nuxt-link :to="localePath(`/projects/${item.id}`)">
         <span>{{ item.name }}</span>
       </nuxt-link>
     </template>
-    <template #[`item.updatedAt`]="{ item }">
+    <!-- <template #[`item.updatedAt`]="{ item }">
       <span>{{ item.updatedAt | dateParse('YYYY-MM-DDTHH:mm:ss') | dateFormat('DD/MM/YYYY HH:mm') }}</span>
     </template>
     <template #[`item.tags`]="{ item }">
@@ -40,7 +40,7 @@
       :key="tag.id"
       outlined>{{tag.text}}
       </v-chip>
-    </template>
+    </template> -->
   </v-data-table>
 </template>
 
@@ -69,22 +69,22 @@ export default Vue.extend({
       required: true
     }
   },
-  data() {
-    return {
-      search: ''
-    }
-  },
+  // data() {
+  //   return {
+  //     search: ''
+  //   }
+  // },
 
-  computed: {
-    headers() {
-      return [
-        { text: this.$t('generic.name'), value: 'name' },
-        { text: this.$t('generic.description'), value: 'description' },
-        { text: this.$t('generic.type'), value: 'projectType' },
-        { text: 'Updated', value: 'updatedAt' },
-        { text: 'Tags', value: 'tags'}
-      ]
-    }
-  }
+  // computed: {
+  //   headers() {
+  //     return [
+  //       { text: this.$t('generic.name'), value: 'name' },
+  //       { text: this.$t('generic.description'), value: 'description' },
+  //       { text: this.$t('generic.type'), value: 'projectType' },
+  //       { text: 'Updated', value: 'updatedAt' },
+  //       { text: 'Tags', value: 'tags'}
+  //     ]
+  //   }
+  // }
 })
 </script>
