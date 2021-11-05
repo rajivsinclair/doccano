@@ -12,11 +12,11 @@
         v-for="(item, index) in items"
         :key="index"
       >
-        <v-stepper-step
+        <!-- <v-stepper-step
           :complete="e6 > index + 1"
           :step="index + 1"
           editable
-        >
+        > -->
           {{ item.title }}
         </v-stepper-step>
         <v-stepper-content :step="index + 1">
@@ -31,7 +31,7 @@
               :video-id="item.videoId"
             />
           </v-card>
-          <v-btn
+          <!-- <v-btn
             color="primary mt-5"
             @click="next"
           >
@@ -43,7 +43,7 @@
             @click="prev"
           >
             {{ $t('generic.cancel') }}
-          </v-btn>
+          </v-btn> -->
         </v-stepper-content>
       </div>
     </v-stepper>
