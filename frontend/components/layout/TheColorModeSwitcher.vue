@@ -1,5 +1,5 @@
 <template>
-  <v-btn
+  <!-- <v-btn
     icon
     fab
     @click="isDark=!isDark"
@@ -34,4 +34,4 @@ export default Vue.extend({
     this.isDark = dark ? JSON.parse(dark) : false
   }
 })
-</script>
+</script> -->

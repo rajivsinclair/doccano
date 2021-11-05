@@ -1,5 +1,5 @@
 <template>
-  <v-footer
+  <!-- <v-footer
     color="primary lighten-1"
     padless
   >
@@ -18,5 +18,5 @@
         &copy; {{ new Date().getFullYear() }} doccano
       </v-flex>
     </v-layout>
-  </v-footer>
+  </v-footer> -->
 </template>

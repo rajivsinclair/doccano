@@ -1,5 +1,5 @@
 <template>
-  <v-menu
+  <!-- <v-menu
     open-on-hover
     offset-y
   >
@@ -24,5 +24,5 @@
         {{ locale.name }}
       </nuxt-link>
     </v-list>
-  </v-menu>
+  </v-menu> -->
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <!-- <v-card>
     <v-img
       :src="imageSrc"
       height="200px"
@@ -37,4 +37,4 @@ export default Vue.extend({
     }
   }
 })
-</script>
+</script> -->

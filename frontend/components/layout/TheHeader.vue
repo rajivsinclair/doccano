@@ -15,7 +15,7 @@
       v-if="!isAuthenticated"
       class="ml-2 d-none d-sm-flex"
     >
-      doccano
+      <!-- doccano -->
     </v-toolbar-title>
     <v-btn
       v-if="isAuthenticated && isIndividualProject"
@@ -39,21 +39,21 @@
     >
       {{ $t('header.projects') }}
     </v-btn>
-    <v-menu
+    <!-- <v-menu
       v-if="!isAuthenticated"
       open-on-hover
       offset-y
     >
       <template #activator="{ on }">
-        <v-btn
+        <!-- <v-btn
           text
           v-on="on"
         >
           {{ $t('home.demoDropDown') }}
           <v-icon>mdi-menu-down</v-icon>
-        </v-btn>
+        </v-btn> 
       </template>
-      <v-list>
+       <v-list>
         <v-list-item
           v-for="(item, index) in items"
           :key="index"
@@ -62,7 +62,7 @@
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
-    </v-menu>
+    </v-menu> -->
     <v-btn
       v-if="!isAuthenticated"
       outlined
