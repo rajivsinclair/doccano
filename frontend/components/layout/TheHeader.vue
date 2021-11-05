@@ -108,27 +108,27 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-// import TheColorModeSwitcher from './TheColorModeSwitcher'
-// import LocaleMenu from './LocaleMenu'
+import TheColorModeSwitcher from './TheColorModeSwitcher'
+import LocaleMenu from './LocaleMenu'
 
-// export default {
-//   components: {
-//     TheColorModeSwitcher,
-//     LocaleMenu
-//   },
+export default {
+  components: {
+    TheColorModeSwitcher,
+    LocaleMenu
+  },
 
-//   data() {
-//     return {
-//       items: [
-//         { title: this.$t('home.demoNER'), link: 'named-entity-recognition' },
-//         { title: this.$t('home.demoSent'), link: 'sentiment-analysis' },
-//         { title: this.$t('home.demoTranslation'), link: 'translation' },
-//         { title: this.$t('home.demoTextToSQL'), link: 'text-to-sql' },
-//         { title: 'Image Classification', link: 'image-classification' },
-//         { title: 'Speech to Text', link: 'speech-to-text' },
-//       ],
-//     }
-//   },
+  data() {
+    return {
+      items: [
+        { title: this.$t('home.demoNER'), link: 'named-entity-recognition' },
+        { title: this.$t('home.demoSent'), link: 'sentiment-analysis' },
+        { title: this.$t('home.demoTranslation'), link: 'translation' },
+        { title: this.$t('home.demoTextToSQL'), link: 'text-to-sql' },
+        { title: 'Image Classification', link: 'image-classification' },
+        { title: 'Speech to Text', link: 'speech-to-text' },
+      ],
+    }
+  },
 
   computed: {
     ...mapGetters('auth', ['isAuthenticated', 'getUsername']),
