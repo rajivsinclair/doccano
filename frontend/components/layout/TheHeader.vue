@@ -113,8 +113,8 @@ import LocaleMenu from './LocaleMenu'
 
 export default {
   components: {
-    TheColorModeSwitcher,
-    LocaleMenu
+    // TheColorModeSwitcher,
+    // LocaleMenu
   },
 
   data() {

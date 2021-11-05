@@ -1,6 +1,6 @@
 <template>
   <section>
-    <!-- <v-parallax
+    <v-parallax
       :src="require(`~/assets/vbanner.jpg`)"
       height="400"
       dark
@@ -41,6 +41,6 @@
           </div>
         </v-flex>
       </v-layout>
-    </v-parallax> -->
+    </v-parallax>
   </section>
 </template>
