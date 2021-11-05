@@ -1,7 +1,7 @@
 export default {
-  mainTitle: 'Text Annotation for Humans',
-  getStarted: 'Get Started',
-  startAnnotation: 'Start Annotation',
+  mainTitle: 'LLEAD Document Tagging',
+  getStarted: 'How to get started',
+  startAnnotation: 'Start Tagging',
   featuresTitle: 'The best features',
   featuresTitle1: 'Team Collaboration',
   featuresText1: 'Annotation with your team mates',
