@@ -62,13 +62,13 @@ export default {
     return {
       e6: 1,
       items: [
-        { title: this.$t('projectHome.importData'), videoId: 'dA4ID1DSxCE' },
-        { title: this.$t('projectHome.createLabels'), videoId: '1bSML270quU' },
-        { title: this.$t('projectHome.addMembers'), videoId: 'NI09dcBz-qA' },
-        { title: this.$t('projectHome.defineGuideline'), videoId: 'AvvX3Xs32nA' },
-        { title: this.$t('projectHome.annotateDataset'), videoId: 'F3XoSdyiMhA' },
-        { title: this.$t('projectHome.viewStatistics'), videoId: 'kfRpa0mNQMY' },
-        { title: this.$t('projectHome.exportDataset'), videoId: 'Pfy_QcHEeQ4' }
+        { title: this.$t('projectHome.importData'), videoId: 'hKayEy6I7oI' },
+        { title: this.$t('projectHome.createLabels'), videoId: 'Fk9MkToPQbM' },
+        // { title: this.$t('projectHome.addMembers'), videoId: 'NI09dcBz-qA' },
+        // { title: this.$t('projectHome.defineGuideline'), videoId: 'AvvX3Xs32nA' },
+        // { title: this.$t('projectHome.annotateDataset'), videoId: 'F3XoSdyiMhA' },
+        // { title: this.$t('projectHome.viewStatistics'), videoId: 'kfRpa0mNQMY' },
+        // { title: this.$t('projectHome.exportDataset'), videoId: 'Pfy_QcHEeQ4' }
       ]
     }
   },

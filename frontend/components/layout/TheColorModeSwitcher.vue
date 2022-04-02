@@ -1,28 +1,14 @@
 <template>
-  <v-btn
-    icon
-    fab
-    @click="isDark=!isDark"
-  >
-    <v-icon v-if="isDark">
-      {{ mdiMoonWaxingCrescent }}
-    </v-icon>
-    <v-icon v-else>
-      {{ mdiWhiteBalanceSunny }}
-    </v-icon>
-  </v-btn>
+  
 </template>
+
 
 <script lang="ts">
 import Vue from 'vue'
-import { mdiMoonWaxingCrescent, mdiWhiteBalanceSunny } from '@mdi/js'
-
 export default Vue.extend({
   data() {
     return {
-      isDark: false,
-      mdiMoonWaxingCrescent,
-      mdiWhiteBalanceSunny
+      isDark: false
     }
   },
 
