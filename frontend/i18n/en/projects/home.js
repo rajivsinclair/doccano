@@ -1,7 +1,7 @@
 export default {
   home: 'Home',
-  welcome: 'Welcome to Doccano!',
-  importData: 'Import a dataset',
+  welcome: 'LLEAD Document Tagging',
+  importData: 'How to get started',
   createLabels: 'Create labels for this project',
   addMembers: 'Add members for collaborative work',
   defineGuideline: 'Define a guideline for the work',
