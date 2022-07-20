@@ -80,38 +80,38 @@
 <script>
 import { mdiLogout, mdiDotsVertical, mdiMenuDown, mdiHexagonMultiple } from '@mdi/js'
 import { mapGetters, mapActions } from 'vuex'
-// import TheColorModeSwitcher from './TheColorModeSwitcher'
-// import LocaleMenu from './LocaleMenu'
+import TheColorModeSwitcher from './TheColorModeSwitcher'
+import LocaleMenu from './LocaleMenu'
 
-// export default {
-//   components: {
-//     TheColorModeSwitcher,
-//     LocaleMenu
-//   },
+export default {
+  components: {
+    TheColorModeSwitcher,
+    LocaleMenu
+  },
 
-  // data() {
-  //   return {
-  //     items: [
-  //       { title: this.$t('home.demoNER'), link: 'named-entity-recognition' },
-  //       { title: this.$t('home.demoSent'), link: 'sentiment-analysis' },
-  //       { title: this.$t('home.demoTranslation'), link: 'translation' },
-  //       {
-  //         title: 'Intent Detection and Slot Filling',
-  //         link: 'intent-detection-and-slot-filling'
-  //       },
-  //       { title: this.$t('home.demoTextToSQL'), link: 'text-to-sql' },
-  //       { title: 'Image Classification', link: 'image-classification' },
-  //       { title: 'Image Captioning', link: 'image-caption' },
-  //       { title: 'Object Detection', link: 'object-detection' },
-  //       { title: 'Polygon Segmentation', link: 'segmentation' },
-  //       { title: 'Speech to Text', link: 'speech-to-text' }
-  //     ],
-  //     mdiLogout,
-  //     mdiDotsVertical,
-  //     mdiMenuDown,
-  //     mdiHexagonMultiple
-  //   }
-  // },
+  data() {
+    return {
+      items: [
+        { title: this.$t('home.demoNER'), link: 'named-entity-recognition' },
+        { title: this.$t('home.demoSent'), link: 'sentiment-analysis' },
+        { title: this.$t('home.demoTranslation'), link: 'translation' },
+        {
+          title: 'Intent Detection and Slot Filling',
+          link: 'intent-detection-and-slot-filling'
+        },
+        { title: this.$t('home.demoTextToSQL'), link: 'text-to-sql' },
+        { title: 'Image Classification', link: 'image-classification' },
+        { title: 'Image Captioning', link: 'image-caption' },
+        { title: 'Object Detection', link: 'object-detection' },
+        { title: 'Polygon Segmentation', link: 'segmentation' },
+        { title: 'Speech to Text', link: 'speech-to-text' }
+      ],
+      mdiLogout,
+      mdiDotsVertical,
+      mdiMenuDown,
+      mdiHexagonMultiple
+    }
+  },
 
   computed: {
     ...mapGetters('auth', ['isAuthenticated', 'getUsername']),

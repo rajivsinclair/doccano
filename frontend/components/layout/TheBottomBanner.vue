@@ -1,6 +1,6 @@
 <template>
   <section>
-    <!-- <v-parallax :src="require(`~/assets/vbanner.jpg`)" height="400" dark>
+    <v-parallax :src="require(`~/assets/vbanner.jpg`)" height="400" dark>
       <v-container>
         <v-layout wrap align-center justify-center class="white--text">
           <v-flex xs12 md7>
@@ -32,11 +32,11 @@
           </v-flex>
         </v-layout>
       </v-container>
-    </v-parallax> -->
+    </v-parallax>
   </section>
 </template>
 
-<!-- <script lang="ts">
+<script lang="ts">
 import Vue from 'vue'
 import { mdiMenuDown } from '@mdi/js'
 
@@ -53,4 +53,4 @@ export default Vue.extend({
     }
   }
 })
-</script> -->
+</script>
