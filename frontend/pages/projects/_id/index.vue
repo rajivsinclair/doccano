@@ -3,7 +3,7 @@
     <v-card-title>
       {{ $t('projectHome.welcome') }}
     </v-card-title>
-    <v-stepper v-model="e6" vertical non-linear>
+    <!-- <v-stepper v-model="e6" vertical non-linear>
       <div v-for="(item, index) in items" :key="index">
         <v-stepper-step :complete="e6 > index + 1" :step="index + 1" editable>
           {{ item.title }}
@@ -20,7 +20,9 @@
           </v-btn>
         </v-stepper-content>
       </div>
-    </v-stepper>
+    </v-stepper> -->
+                <iframe src="https://docs.google.com/document/d/e/2PACX-1vQxeNvN5RM4fib7kNLWMZOhK73xHK9j0hMbOxPikcnYP_rgqjxPXPq_zLQW9MtHMn9ptgJa3Fo1pTgG/pub?embedded=true"></iframe>
+                
   </v-card>
 </template>
 
@@ -39,19 +41,26 @@ export default {
         { title: this.$t('projectHome.importData'), videoId: 'dA4ID1DSxCE' },
         { title: this.$t('projectHome.createLabels'), videoId: '1bSML270quU' },
         { title: this.$t('projectHome.addMembers'), videoId: 'NI09dcBz-qA' },
-        {
-          title: this.$t('projectHome.defineGuideline'),
-          videoId: 'AvvX3Xs32nA'
-        },
-        {
-          title: this.$t('projectHome.annotateDataset'),
-          videoId: 'F3XoSdyiMhA'
-        },
-        {
-          title: this.$t('projectHome.viewStatistics'),
-          videoId: 'kfRpa0mNQMY'
-        },
+        { title: this.$t('projectHome.defineGuideline'), videoId: 'AvvX3Xs32nA' },
+        { title: this.$t('projectHome.annotateDataset'), videoId: 'F3XoSdyiMhA' },
+        { title: this.$t('projectHome.viewStatistics'), videoId: 'kfRpa0mNQMY' },
         { title: this.$t('projectHome.exportDataset'), videoId: 'Pfy_QcHEeQ4' }
+        // { title: this.$t('projectHome.importData'), videoId: 'dA4ID1DSxCE' },
+        // { title: this.$t('projectHome.createLabels'), videoId: '1bSML270quU' },
+        // { title: this.$t('projectHome.addMembers'), videoId: 'NI09dcBz-qA' },
+        // {
+        //   title: this.$t('projectHome.defineGuideline'),
+        //   videoId: 'AvvX3Xs32nA'
+        // },
+        // {
+        //   title: this.$t('projectHome.annotateDataset'),
+        //   videoId: 'F3XoSdyiMhA'
+        // },
+        // {
+        //   title: this.$t('projectHome.viewStatistics'),
+        //   videoId: 'kfRpa0mNQMY'
+        // },
+        // { title: this.$t('projectHome.exportDataset'), videoId: 'Pfy_QcHEeQ4' }
       ]
     }
   },
