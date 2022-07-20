@@ -1,6 +1,6 @@
 <template>
   <section>
-    <!-- <v-parallax :src="require(`~/assets/vbanner.jpg`)" height="400" dark>
+    <v-parallax :src="require(`~/assets/vbanner.jpg`)" height="400" dark>
       <v-layout wrap align-center justify-center class="white--text">
         <v-flex text-right class="mr-5">
           <img src="~/assets/icon.png" alt="doccano" height="200" />
@@ -22,11 +22,11 @@
           </div>
         </v-flex>
       </v-layout>
-    </v-parallax> -->
+    </v-parallax>
   </section>
 </template>
 
-<!-- <script lang="ts">
+<script lang="ts">
 import Vue from 'vue'
 import { mdiGithub } from '@mdi/js'
 
@@ -37,4 +37,4 @@ export default Vue.extend({
     }
   }
 })
-</script> -->
+</script>

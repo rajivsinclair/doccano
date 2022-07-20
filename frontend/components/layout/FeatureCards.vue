@@ -1,5 +1,5 @@
 <template>
-  <!-- <v-container>
+  <v-container>
     <v-layout column wrap class="my-5" align-center>
       <v-flex xs12 sm4 class="my-3">
         <div class="text-xs-center">
@@ -22,10 +22,10 @@
         </v-container>
       </v-flex>
     </v-layout>
-  </v-container> -->
+  </v-container>
 </template>
 
-<!-- <script lang="ts">
+<script lang="ts">
 import Vue from 'vue'
 import FeatureCard from './FeatureCard.vue'
 
@@ -42,7 +42,7 @@ export default Vue.extend({
           title: this.$t('home.featuresTitle1'),
           text: this.$t('home.featuresText1')
         },
-        { -->
+        {
           imageSrc: 'feature2.png',
           title: this.$t('home.featuresTitle2'),
           text: this.$t('home.featuresText2')
