@@ -8,7 +8,7 @@
           </h2>
         </div>
       </v-flex>
-      <v-flex xs12>
+      <!-- <v-flex xs12>
         <v-container grid-list-xl>
           <v-layout wrap align-center>
             <v-flex v-for="(item, index) in featureCards" :key="index" xs12 md4>
@@ -20,12 +20,12 @@
             </v-flex>
           </v-layout>
         </v-container>
-      </v-flex>
+      </v-flex> -->
     </v-layout>
   </v-container>
 </template>
 
-<script lang="ts">
+<!-- <script lang="ts">
 import Vue from 'vue'
 import FeatureCard from './FeatureCard.vue'
 
@@ -56,4 +56,4 @@ export default Vue.extend({
     }
   }
 })
-</script>
+</script> -->
