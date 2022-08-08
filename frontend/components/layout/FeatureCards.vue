@@ -3,9 +3,9 @@
     <v-layout column wrap class="my-5" align-center>
       <v-flex xs12 sm4 class="my-3">
         <div class="text-xs-center">
-          <h2 class="headline">
+          <!-- <h2 class="headline">
             {{ $t('home.featuresTitle') }}
-          </h2>
+          </h2> -->
         </div>
       </v-flex>
       <!-- <v-flex xs12>
