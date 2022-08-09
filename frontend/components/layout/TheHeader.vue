@@ -5,7 +5,7 @@
       <img src="~/assets/icon.png" height="48" />
     </nuxt-link>
     <v-toolbar-title v-if="!isAuthenticated" class="ml-2 d-none d-sm-flex">
-      doccano
+      
     </v-toolbar-title>
     <v-btn
       v-if="isAuthenticated && isIndividualProject"
@@ -29,7 +29,7 @@
     >
       {{ $t('header.projects') }}
     </v-btn>
-    <v-menu v-if="!isAuthenticated" open-on-hover offset-y>
+    <!-- <v-menu v-if="!isAuthenticated" open-on-hover offset-y>
       <template #activator="{ on }">
         <v-btn text v-on="on">
           {{ $t('home.demoDropDown') }}
@@ -45,7 +45,7 @@
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
-    </v-menu>
+    </v-menu> -->
     <v-btn v-if="!isAuthenticated" outlined @click="$router.push(localePath('/auth'))">
       {{ $t('user.login') }}
     </v-btn>
