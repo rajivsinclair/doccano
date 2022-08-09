@@ -10,7 +10,7 @@
             <h1 class="mb-2 display-1 text-xs-center">
               {{ $t('home.footerTitle') }}
             </h1>
-            <div class="mt-4">
+            <!-- <div class="mt-4">
               <v-menu open-on-hover offset-y>
                 <template #activator="{ on }">
                   <v-btn class="blue lighten-2" dark large v-on="on">
@@ -27,7 +27,7 @@
                     <v-list-item-title>{{ item.title }}</v-list-item-title>
                   </v-list-item>
                 </v-list>
-              </v-menu>
+              </v-menu> -->
             </div>
           </v-flex>
         </v-layout>
@@ -36,7 +36,7 @@
   </section>
 </template>
 
-<script lang="ts">
+<!-- <script lang="ts">
 import Vue from 'vue'
 import { mdiMenuDown } from '@mdi/js'
 
@@ -53,4 +53,4 @@ export default Vue.extend({
     }
   }
 })
-</script>
+</script> -->
