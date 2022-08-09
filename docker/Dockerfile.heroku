@@ -1,1 +1,1 @@
-FROM rajivsinclair/doccano:llead
+FROM pdwrajiv/doccano:latest
