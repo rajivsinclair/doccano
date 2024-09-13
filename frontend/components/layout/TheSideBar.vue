@@ -29,24 +29,20 @@
 
 <script>
 import {
-  mdiHome,
-  mdiDatabase,
-  mdiCog,
-  mdiChartBar,
-  mdiBookOpenOutline,
-  mdiCommentAccountOutline,
-  mdiLabel,
   mdiAccount,
+  mdiBookOpenOutline,
+  mdiChartBar,
+  mdiCog,
+  mdiCommentAccountOutline,
+  mdiDatabase,
+  mdiHome,
+  mdiLabel,
   mdiPlayCircleOutline
 } from '@mdi/js'
+import { getLinkToAnnotationPage } from '~/presenter/linkToAnnotationPage'
 
 export default {
   props: {
-    link: {
-      type: String,
-      default: '',
-      required: true
-    },
     isProjectAdmin: {
       type: Boolean,
       default: false,
@@ -85,13 +81,17 @@ export default {
           icon: mdiLabel,
           text: this.$t('labels.labels'),
           link: 'labels',
-          isVisible: this.isProjectAdmin && this.project.canDefineLabel
+          isVisible:
+            (this.isProjectAdmin || this.project.allowMemberToCreateLabelType) &&
+            this.project.canDefineLabel
         },
         {
           icon: mdiLabel,
           text: 'Relations',
           link: 'links',
-          isVisible: this.isProjectAdmin && this.project.canDefineRelation
+          isVisible:
+            (this.isProjectAdmin || this.project.allowMemberToCreateLabelType) &&
+            this.project.canDefineRelation
         },
         {
           icon: mdiAccount,
@@ -131,8 +131,9 @@ export default {
   methods: {
     toLabeling() {
       const query = this.$services.option.findOption(this.$route.params.id)
+      const link = getLinkToAnnotationPage(this.$route.params.id, this.project.projectType)
       this.$router.push({
-        path: this.localePath(this.link),
+        path: this.localePath(link),
         query
       })
     }

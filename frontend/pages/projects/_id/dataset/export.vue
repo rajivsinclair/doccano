@@ -39,10 +39,12 @@
 <script lang="ts">
 import Vue from 'vue'
 import { fileFormatRules } from '@/rules/index'
-import { FormatDTO } from '~/services/application/download/formatData'
+import { Format } from '~/domain/models/download/format'
 
 export default Vue.extend({
   layout: 'project',
+
+  middleware: ['check-auth', 'auth', 'setCurrentProject', 'isProjectAdmin'],
 
   validate({ params }) {
     return /^\d+$/.test(params.id)
@@ -53,7 +55,7 @@ export default Vue.extend({
       exportApproved: false,
       file: null,
       fileFormatRules,
-      formats: [] as FormatDTO[],
+      formats: [] as Format[],
       isProcessing: false,
       polling: null,
       selectedFormat: null as any,
@@ -68,13 +70,13 @@ export default Vue.extend({
     },
 
     example(): string {
-      const item = this.formats.find((item: FormatDTO) => item.name === this.selectedFormat)
+      const item = this.formats.find((item: Format) => item.name === this.selectedFormat)
       return item!.example.trim()
     }
   },
 
   async created() {
-    this.formats = await this.$services.downloadFormat.list(this.projectId)
+    this.formats = await this.$repositories.downloadFormat.list(this.projectId)
   },
 
   beforeDestroy() {
@@ -93,7 +95,7 @@ export default Vue.extend({
 
     async downloadRequest() {
       this.isProcessing = true
-      this.taskId = await this.$services.download.request(
+      this.taskId = await this.$repositories.download.prepare(
         this.projectId,
         this.selectedFormat,
         this.exportApproved
@@ -105,9 +107,9 @@ export default Vue.extend({
       // @ts-ignore
       this.polling = setInterval(async () => {
         if (this.taskId) {
-          const res = await this.$services.taskStatus.get(this.taskId)
+          const res = await this.$repositories.taskStatus.get(this.taskId)
           if (res.ready) {
-            this.$services.download.download(this.projectId, this.taskId)
+            this.$repositories.download.download(this.projectId, this.taskId)
             this.reset()
           }
         }

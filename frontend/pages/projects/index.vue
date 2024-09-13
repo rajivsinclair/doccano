@@ -4,6 +4,9 @@
       <v-btn class="text-capitalize" color="primary" @click.stop="$router.push('projects/create')">
         {{ $t('generic.create') }}
       </v-btn>
+      <v-btn class="text-capitalize ms-2" color="primary" :disabled="!canClone" @click.stop="clone">
+        Clone
+      </v-btn>
       <v-btn
         class="text-capitalize ms-2"
         :disabled="!canDelete"
@@ -31,8 +34,10 @@ import _ from 'lodash'
 import Vue from 'vue'
 import { mapGetters } from 'vuex'
 import ProjectList from '@/components/project/ProjectList.vue'
-import { ProjectDTO, ProjectListDTO } from '~/services/application/project/projectData'
 import FormDelete from '~/components/project/FormDelete.vue'
+import { Page } from '~/domain/models/page'
+import { Project } from '~/domain/models/project/project'
+import { SearchQueryData } from '~/services/application/project/projectApplicationService'
 
 export default Vue.extend({
   components: {
@@ -46,15 +51,17 @@ export default Vue.extend({
   data() {
     return {
       dialogDelete: false,
-      projects: {} as ProjectListDTO,
-      selected: [] as ProjectDTO[],
+      projects: {} as Page<Project>,
+      selected: [] as Project[],
       isLoading: false
     }
   },
 
   async fetch() {
     this.isLoading = true
-    this.projects = await this.$services.project.list(this.$route.query)
+    this.projects = await this.$services.project.list(
+      this.$route.query as unknown as SearchQueryData
+    )
     this.isLoading = false
   },
 
@@ -62,6 +69,10 @@ export default Vue.extend({
     ...mapGetters('auth', ['isStaff']),
     canDelete(): boolean {
       return this.selected.length > 0
+    },
+
+    canClone(): boolean {
+      return this.selected.length === 1
     }
   },
 
@@ -78,6 +89,12 @@ export default Vue.extend({
       this.$fetch()
       this.dialogDelete = false
       this.selected = []
+    },
+
+    async clone() {
+      const project = await this.$services.project.clone(this.selected[0])
+      this.selected = []
+      this.$router.push(`/projects/${project.id}/settings`)
     },
 
     updateQuery(query: object) {
